@@ -27,7 +27,10 @@ spec:
             - name: DB_POSTGRESDB_SCHEMA
               value: public
             - name: N8N_ENCRYPTION_KEY
-              value: "ABCD1234EFGH5678IJKL9012MNOP3456"
+              valueFrom:
+                secretKeyRef:
+                  name: n8n-db-encryption-key
+                  key: encryption-key
             - name: N8N_DEFAULT_EDITION
               value: community
             - name: N8N_RUNNERS_MODE
