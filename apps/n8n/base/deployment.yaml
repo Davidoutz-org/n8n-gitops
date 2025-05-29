@@ -21,7 +21,7 @@ spec:
             - name: DB_TYPE
               value: postgresdb
             - name: DB_POSTGRESDB_HOST
-              value: n8n-db-cnpg-v1-rw.cnpg-dev.svc.cluster.local
+              value: n8n-db-cnpg-v1-rw.svc.cluster.local
             - name: DB_POSTGRESDB_DATABASE
               value: n8n
             - name: DB_POSTGRESDB_SCHEMA
