@@ -1,4 +1,4 @@
-namespace: n8n-dev
+namespace: n8n
 
 resources:
   - ../../base
