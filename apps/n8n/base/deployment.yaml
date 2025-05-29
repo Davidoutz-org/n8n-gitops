@@ -34,6 +34,16 @@ spec:
               value: internal
             - name: N8N_DIAGNOSTICS_ENABLED
               value: "false"
+            - name: DB_POSTGRESDB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: n8n-db-creds
+                  key: username
+            - name: DB_POSTGRESDB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: n8n-db-creds
+                  key: password
           volumeMounts:
             - name: n8n-data
               mountPath: /home/node/.n8n
