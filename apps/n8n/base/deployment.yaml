@@ -30,7 +30,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: n8n-db-encryption-key
-                  key: encryption-key
+                  key: encryption_key
             - name: N8N_DEFAULT_EDITION
               value: community
             - name: N8N_RUNNERS_MODE
