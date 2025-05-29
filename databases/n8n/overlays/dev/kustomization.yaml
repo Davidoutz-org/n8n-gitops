@@ -1,0 +1,7 @@
+namespace: n8n
+
+resources:
+  - ../../base
+  - namespace.yaml
+  - secrets.yaml
+  - scheduled-backup.yaml
