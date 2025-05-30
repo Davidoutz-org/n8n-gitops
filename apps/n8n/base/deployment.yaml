@@ -8,6 +8,8 @@ spec:
     matchLabels:
       app: n8n
   template:
+    nodeSelector:
+        n8n-storage: "true"  # Match the node label we set
     metadata:
       labels:
         app: n8n

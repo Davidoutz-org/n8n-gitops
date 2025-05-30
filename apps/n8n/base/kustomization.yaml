@@ -4,3 +4,4 @@ resources:
   - deployment.yaml
   - service.yaml
   - pvc.yaml
+  - persistent-storage.yaml  # Add this line
