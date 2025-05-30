@@ -2,5 +2,5 @@ namespace: n8n
 
 resources:
   - ../../base
-  - secrets.yaml
-  - scheduled-backup.yaml
+  # - secrets.yaml
+  # - scheduled-backup.yaml
