@@ -1,0 +1,7 @@
+# n8n-gitops/platform/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../apps/n8n/overlays/dev
+  - ../databases/n8n/overlays/dev
