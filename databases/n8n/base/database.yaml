@@ -11,6 +11,10 @@ spec:
   storage:
     size: 5Gi
 
+  # Add node selector to ensure pods land on the node with storage
+  nodeSelector:
+    n8n-storage: "true"
+
   monitoring:
     enablePodMonitor: true
 

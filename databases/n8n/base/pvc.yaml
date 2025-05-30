@@ -1,23 +1,23 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: n8n-storage
+  name: postgres-storage
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
 ---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: n8n-data-pv
+  name: postgres-data-pv
 spec:
   capacity:
-    storage: 1Gi
+    storage: 5Gi
   accessModes:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: n8n-storage
+  storageClassName: postgres-storage
   local:
-    path: /data/n8n
+    path: /data/postgres
   nodeAffinity:
     required:
       nodeSelectorTerms:
