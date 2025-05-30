@@ -47,9 +47,14 @@ spec:
                 secretKeyRef:
                   name: n8n-db-creds
                   key: password
+            - name: N8N_USER_FOLDER
+              value: "/home/node/.n8n"
+            - name: N8N_PERSISTENCE_TYPE
+              value: "combined"
           volumeMounts:
             - name: n8n-data
               mountPath: /home/node/.n8n
       volumes:
         - name: n8n-data
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: n8n-data
